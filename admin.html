@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AD-SAFE — Admin Panel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <div class="logo">
+        <div class="logo-icon">🛡️</div>
+        <div class="logo-text">
+          <h1>Admin Dashboard</h1>
+          <p class="tag">Manage User Safety Records</p>
+        </div>
+      </div>
+      <a href="index.html" class="btn small">🏠 Back to Home</a>
+    </header>
+
+    <section class="panel">
+      <h2>Add / Update Record</h2>
+      <div class="form">
+        <input type="text" id="userAddress" placeholder="User Wallet Address (0x...)" />
+        <input type="text" id="userName" placeholder="User Name" />
+        <input type="number" id="userScore" placeholder="Safety Score (0-100)" />
+        <button id="addRecordBtn" class="btn">✅ Add / Update Record</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Fetch Record</h2>
+      <div class="form">
+        <input type="text" id="fetchAddress" placeholder="Enter User Wallet to Fetch" />
+        <button id="getRecordBtn" class="btn">🔍 Get Record</button>
+      </div>
+      <pre id="recordOutput" class="output-box">No record yet...</pre>
+    </section>
+    <button
+  onClick={handleReward}
+  className="bg-green-600 text-white p-2 rounded-lg"
+>
+  Send Reward 🎁
+</button>
+
+
+    <footer class="note">
+      <small>Connected to AD-SAFE smart contract on blockchain.</small>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.7.1/dist/ethers.umd.min.js"></script>
+  <script type="module" src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AD-SAFE — User Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <div class="logo">
+        <div class="logo-icon">🧑‍💻</div>
+        <div class="logo-text">
+          <h1>User Dashboard</h1>
+          <p class="tag">View Your Record from Blockchain</p>
+        </div>
+      </div>
+
+      <div class="wallet-area">
+        <button id="connectBtn" class="btn">🪙 Connect Wallet</button>
+        <div id="walletInfo" class="wallet-info hidden">
+          Connected: <span id="walletAddress">—</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="record-section hidden" id="recordSection">
+      <h2>📋 Your Record</h2>
+      <div class="record-card">
+        <p><strong>Name:</strong> <span id="userName">—</span></p>
+        <p><strong>Score:</strong> <span id="userScore">—</span></p>
+        <p><strong>Eligibility:</strong> <span id="userEligible">—</span></p>
+      </div>
+      <button class="btn" id="refreshBtn">🔄 Refresh Record</button>
+    </section>
+
+    <footer class="note">
+      <a href="index.html" class="btn">🏠 Back to Home</a>
+    </footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.7.1/dist/ethers.umd.min.js"></script>
+  <script type="module" src="user.js"></script>
+</body>
+</html>

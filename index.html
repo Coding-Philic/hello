@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AD-SAFE — Landing</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Ethers.js CDN -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/ethers@6/dist/ethers.min.js"></script> -->
+</head>
+<body>
+  <main class="container">
+    <header class="hero">
+      <div class="logo">
+        <div class="logo-icon">🛡️</div>
+        <div class="logo-text">
+          <h1>AD-SAFE</h1>
+          <p class="tag">Transparent Blockchain-based Verification System</p>
+        </div>
+      </div>
+
+      <div class="wallet-area">
+        <button id="connectBtn" class="btn">🪙 Connect Wallet</button>
+        <div id="walletInfo" class="wallet-info hidden">
+          Connected: <span id="walletAddress">—</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="instructions">
+      <p>Aap wallet connect karein aur phir role select karne ka option dikhaya jayega.</p>
+    </section>
+    <!-- Role Selection Section -->
+<section id="roleSection" class="role-section hidden">
+  <h2>Select Your Role</h2>
+  <div class="roles">
+    <button class="btn role-btn" data-role="admin">👨‍💼 I am Admin</button>
+    <button class="btn role-btn" data-role="user">🧑‍🎓 I am Student / Worker</button>
+    <button class="btn role-btn" data-role="visitor">👀 I am Visitor</button>
+  </div>
+</section>
+
+
+    <footer class="note">
+      <small>Development mode — Test on Ethereum testnet (Goerli/Sepolia) ya local network.</small>
+    </footer>
+  </main>
+<script src="https://cdn.jsdelivr.net/npm/ethers@6.7.1/dist/ethers.umd.min.js"></script>
+<script type="module" src="script.js"></script>
+
+
+</body>
+</html>
